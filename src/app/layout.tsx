@@ -1,25 +1,23 @@
-import type {Metadata} from "next";
-import {Montserrat} from "next/font/google";
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
-const montserrat = Montserrat({subsets: ["latin"]});
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Food Yatri",
-    description: "Empowering food vendors by connecting to potential customers.",
+  title: "Food Yatri",
+  description: "Empowering food vendors by connecting to potential customers.",
 };
 
 interface RootLayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export default function RootLayout({
-                                       children,
-                                   }: Readonly<RootLayoutProps>) {
-    return (
-        <html lang="en">
-        <body className={montserrat.className}>{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
+  return (
+    <html lang="en">
+      <body className={montserrat.className}>{children}</body>
+    </html>
+  );
 }
